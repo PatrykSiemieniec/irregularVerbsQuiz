@@ -1,4 +1,4 @@
-import { FC, useContext, useState } from "react";
+import { FC, useContext } from "react";
 import { SortAndFilterProps } from "../types";
 import { ExceptionContext } from "../store";
 
@@ -42,6 +42,7 @@ const SortAndFilter: FC<SortAndFilterProps> = ({ sort, filter }) => {
       <input
         id="search"
         type="search"
+        className="inputSearch"
         placeholder="Wyszukaj czasownik"
         onChange={handleFilterChange}
         pattern="^[a-z]"
