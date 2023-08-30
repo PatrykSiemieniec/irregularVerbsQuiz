@@ -53,7 +53,7 @@ export const IrregularVerbs: Verbs[] = [
   new Verbs(29, "fight", ["fought"], ["fought"], "walczyć"),
   new Verbs(30, "find", ["found"], ["found"], "znaleźć"),
   new Verbs(31, "fly", ["flew"], ["flown"], "lecieć"),
-  new Verbs(32, "forget", ["forgot"], ["forgotten"], "zapomnień"),
+  new Verbs(32, "forget", ["forgot"], ["forgotten"], "zapomnieć"),
   new Verbs(33, "forgive", ["forgave"], ["forgiven"], "wybaczyć"),
   new Verbs(34, "freeze", ["froze"], ["frozen"], "zamarzać"),
   new Verbs(35, "get", ["got"], ["got"], "dostać"),

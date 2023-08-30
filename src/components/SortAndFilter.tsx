@@ -42,7 +42,7 @@ const SortAndFilter: FC<SortAndFilterProps> = ({ sort, filter }) => {
       <input
         id="search"
         type="search"
-        placeholder=" Wyszukaj czasownik"
+        placeholder="Wyszukaj czasownik"
         onChange={handleFilterChange}
       ></input>
       <button
