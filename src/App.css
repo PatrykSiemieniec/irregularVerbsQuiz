@@ -38,7 +38,9 @@ input {
 }
 .inputSearch {
   color: white;
+  border: 0.5px solid gray;
 }
+
 b,
 span {
   color: white;
@@ -79,6 +81,11 @@ select {
 option,
 optgroup {
   background-color: #3b3b3b;
+}
+optgroup {
+  color: rgb(198, 196, 196);
+}
+option {
   color: white;
 }
 @media (max-width: 750px) {

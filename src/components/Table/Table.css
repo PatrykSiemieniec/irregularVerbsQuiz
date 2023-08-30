@@ -6,13 +6,16 @@
   align-items: center;
   column-gap: 25px;
   padding: 0.5rem;
-  border: 0.1px solid white;
+  border: 0.1px solid gray;
   position: relative;
 }
 .translate {
   grid-area: translate;
   display: flex;
   text-align: start;
+}
+.translate b {
+  color: rgb(198, 196, 196);
 }
 .hint {
   position: absolute;
