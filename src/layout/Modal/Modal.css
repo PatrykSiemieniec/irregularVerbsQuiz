@@ -1,0 +1,58 @@
+.background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  backdrop-filter: blur(1px);
+  z-index: 9999;
+  display: flex;
+}
+.container {
+  width: 500px;
+  height: 200px;
+  background-color: #242424;
+  border: 0.5px solid gray;
+  border-radius: 16px;
+  margin: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  box-sizing: border-box;
+  padding: 0.5rem;
+}
+.container b {
+  font-size: 25px;
+}
+.container section {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 20px;
+}
+.container section span {
+  width: 130px;
+}
+.container section span em {
+  font-size: 15px;
+}
+.closeModal {
+  position: absolute;
+  border-radius: 50%;
+  border: 0.5px solid white;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.8em;
+  color: white;
+  text-align: center;
+}
+
+@media (max-width: 750px) {
+  .container {
+    width: 300px;
+    height: auto;
+  }
+  .container section {
+    flex-direction: column;
+    align-items: center;
+  }
+}
