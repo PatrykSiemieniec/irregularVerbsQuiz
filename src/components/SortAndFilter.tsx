@@ -14,8 +14,10 @@ const SortAndFilter: FC<SortAndFilterProps> = ({ sort, filter }) => {
 
   return (
     <div className="sortandfilter">
-      <select id="filter" onChange={handleChangeSort}>
-        <option>Sortuj</option>
+      <select id="filter" onChange={handleChangeSort} defaultValue={"Sortuj"}>
+        <option value="Sortuj" disabled hidden>
+          Sortuj
+        </option>
         <optgroup label="Sortuj po tłumaczeniu">
           <option id="translateAZ" value="translateAZ">
             A-Z

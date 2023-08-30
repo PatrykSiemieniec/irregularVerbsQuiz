@@ -1,4 +1,4 @@
-import { useContext, useState, useEffect } from "react";
+import { useContext, useState, useEffect, useRef, createRef } from "react";
 import {
   compare_AZ_Infinitive,
   compare_AZ_Translate,
@@ -12,6 +12,7 @@ import Header from "./layout/Header";
 import SortAndFilter from "./components/SortAndFilter";
 import { ExceptionContext } from "./store";
 import Table from "./components/Table/Table";
+import FinalResult from "./components/FinalResult/FinalResult";
 
 const Game = () => {
   const { setCount, count } = useContext(CountContext);
@@ -59,15 +60,38 @@ const Game = () => {
     }
   }, [refresh]);
 
+  const tableRefs = useRef([]);
+
+  if (tableRefs.current.length !== sortAndFilterVerbs.length) {
+    tableRefs.current = Array(sortAndFilterVerbs.length)
+      .fill(null)
+      .map((_, index) => tableRefs.current[index] || createRef());
+  }
+
+  const content = () => {
+    if (count === 317) {
+      return <FinalResult />;
+    } else {
+      return (
+        <>
+          <Header count={count} />
+          <SortAndFilter filter={filterVerbs} sort={sortVerbs} />
+          {sortAndFilterVerbs.map((item, index) => (
+            <Table
+              ref={tableRefs.current[index]}
+              key={index}
+              item={item}
+              index={index}
+            />
+          ))}
+        </>
+      );
+    }
+  };
+
   return (
     <div className="mainContainer">
-      <div className="main">
-        <Header count={count} />
-        <SortAndFilter filter={filterVerbs} sort={sortVerbs} />
-        {sortAndFilterVerbs.map((item, index) => (
-          <Table key={index} item={item} index={index} />
-        ))}
-      </div>
+      <div className="main">{content()}</div>
     </div>
   );
 };

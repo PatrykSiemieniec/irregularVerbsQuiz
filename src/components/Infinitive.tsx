@@ -5,10 +5,12 @@ import { tensesPropsTypes } from "../types";
 const Infinitive: FC<tensesPropsTypes> = ({ item }) => {
   const [infinitive, setInfinitive] = useState("");
   const [correct, setCorrect] = useState(false);
+
   const { setCount } = useContext(CountContext);
   const { refresh } = useContext(ExceptionContext);
+
   const handleInfinitiveChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const newValue = e.target.value.toLowerCase();
+    const newValue = e.target.value.toLowerCase().trim();
     setInfinitive(newValue);
     if (newValue === item.infinitive) {
       setCorrect(true);
@@ -17,6 +19,7 @@ const Infinitive: FC<tensesPropsTypes> = ({ item }) => {
       localStorage.setItem(item.id.toString(), newValue);
     }
   };
+
   useEffect(() => {
     setInfinitive("");
     setCorrect(false);

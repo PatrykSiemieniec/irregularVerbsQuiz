@@ -5,13 +5,12 @@ import { tensesPropsTypes } from "../types";
 const PastSimple: FC<tensesPropsTypes> = ({ index, item }) => {
   const [pastSimple, setPastSimple] = useState("");
   const [correct, setCorrect] = useState(false);
-
   const { pastSimpleException, setPastSimpleException, refresh } =
     useContext(ExceptionContext);
   const { setCount } = useContext(CountContext);
 
   const handlePastSimpleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const newValue = e.target.value.toLowerCase();
+    const newValue = e.target.value.toLowerCase().trim();
     setPastSimple(newValue);
     if (
       pastSimpleException !== newValue &&

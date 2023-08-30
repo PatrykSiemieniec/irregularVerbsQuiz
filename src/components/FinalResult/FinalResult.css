@@ -1,0 +1,22 @@
+.finalResult {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 100px;
+}
+.finalResult b {
+  font-size: 3rem;
+}
+.finalResult span {
+  font-size: 2rem;
+}
+
+@media (max-width: 750px) {
+  .finalResult b {
+    font-size: 2rem;
+  }
+  .finalResult span {
+    font-size: 1rem;
+  }
+}

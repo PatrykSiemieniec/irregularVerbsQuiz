@@ -43,11 +43,6 @@ b,
 span {
   color: white;
 }
-option,
-optgroup {
-  background-color: #3b3b3b;
-  color: white;
-}
 
 fieldset {
   color: gray;
@@ -78,6 +73,11 @@ select {
 select {
   font-size: large;
   height: 35px;
+  background-color: #3b3b3b;
+  color: white;
+}
+option,
+optgroup {
   background-color: #3b3b3b;
   color: white;
 }

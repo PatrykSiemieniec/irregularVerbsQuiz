@@ -13,7 +13,7 @@ const PastParticiple: FC<tensesPropsTypes> = ({ index, item }) => {
   const handlePastParticipleChange = (
     e: React.ChangeEvent<HTMLInputElement>
   ) => {
-    const newValue = e.target.value.toLowerCase();
+    const newValue = e.target.value.toLowerCase().trim();
     setPastParticiple(newValue);
 
     if (
