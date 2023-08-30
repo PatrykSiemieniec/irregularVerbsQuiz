@@ -34,13 +34,19 @@ input {
   text-align: center;
   background-color: #3b3b3b;
 }
+b,
+span {
+  color: white;
+}
 
 fieldset {
   color: gray;
   border-color: gray;
   text-align: start;
 }
-
+button {
+  background-color: #1a1a1a;
+}
 .correct {
   color: green;
 }
