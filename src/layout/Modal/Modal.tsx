@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import "./Modal.css";
 import { tensesPropsTypes } from "../../types";
 const Modal: FC<tensesPropsTypes> = ({ closeModal, item }) => {

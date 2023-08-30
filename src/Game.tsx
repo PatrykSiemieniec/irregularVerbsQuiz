@@ -12,7 +12,6 @@ import Header from "./layout/Header";
 import SortAndFilter from "./components/SortAndFilter";
 import { ExceptionContext } from "./store";
 import Table from "./components/Table/Table";
-import Modal from "./layout/Modal/Modal";
 
 const Game = () => {
   const { setCount, count } = useContext(CountContext);
