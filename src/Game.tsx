@@ -60,12 +60,14 @@ const Game = () => {
   }, [refresh]);
 
   return (
-    <div className="main">
-      <Header count={count} />
-      <SortAndFilter filter={filterVerbs} sort={sortVerbs} />
-      {sortAndFilterVerbs.map((item, index) => (
-        <Table key={index} item={item} index={index} />
-      ))}
+    <div className="mainContainer">
+      <div className="main">
+        <Header count={count} />
+        <SortAndFilter filter={filterVerbs} sort={sortVerbs} />
+        {sortAndFilterVerbs.map((item, index) => (
+          <Table key={index} item={item} index={index} />
+        ))}
+      </div>
     </div>
   );
 };

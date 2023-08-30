@@ -1,4 +1,4 @@
-import { FC, useContext } from "react";
+import { FC, useContext, useState } from "react";
 import { SortAndFilterProps } from "../types";
 import { ExceptionContext } from "../store";
 
@@ -9,7 +9,7 @@ const SortAndFilter: FC<SortAndFilterProps> = ({ sort, filter }) => {
     sort(e.target.value);
   };
   const handleFilterChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    filter(e.target.value);
+    filter(e.target.value.toLowerCase());
   };
 
   return (
@@ -44,6 +44,7 @@ const SortAndFilter: FC<SortAndFilterProps> = ({ sort, filter }) => {
         type="search"
         placeholder="Wyszukaj czasownik"
         onChange={handleFilterChange}
+        pattern="^[a-z]"
       ></input>
       <button
         className="button"
