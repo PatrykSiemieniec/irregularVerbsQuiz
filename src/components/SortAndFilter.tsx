@@ -46,6 +46,7 @@ const SortAndFilter: FC<SortAndFilterProps> = ({ sort, filter }) => {
         onChange={handleFilterChange}
       ></input>
       <button
+        className="button"
         onClick={() => {
           localStorage.clear();
           setRefresh((prev) => !prev);
