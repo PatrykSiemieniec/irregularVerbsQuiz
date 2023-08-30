@@ -1,4 +1,4 @@
-import { FC, useState, forwardRef, useRef, createRef } from "react";
+import { FC, useState, forwardRef } from "react";
 import "./Table.css";
 import { tensesPropsTypes } from "../../types";
 import Infinitive from "../Infinitive";
