@@ -1,6 +1,6 @@
 import React, { useState, FC, useContext, useEffect } from "react";
-import { tensesPropsTypes } from "../types";
-import { CountContext, ExceptionContext } from "../store";
+import { tensesPropsTypes } from "../../../types";
+import { CountContext, ExceptionContext } from "../../../store";
 
 const PastParticiple: FC<tensesPropsTypes> = ({ index, item }) => {
   const [pastParticiple, setPastParticiple] = useState("");

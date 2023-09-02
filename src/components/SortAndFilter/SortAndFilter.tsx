@@ -1,7 +1,7 @@
 import { FC, useContext } from "react";
-import { SortAndFilterProps } from "../types";
-import { ExceptionContext } from "../store";
-
+import { SortAndFilterProps } from "../../types";
+import { ExceptionContext } from "../../store";
+import "./SortAndFilter.css";
 const SortAndFilter: FC<SortAndFilterProps> = ({ sort, filter }) => {
   const { setRefresh } = useContext(ExceptionContext);
 

@@ -1,10 +1,10 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Nunito Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
+
   line-height: 1.5;
   font-weight: 400;
-
   color: rgba(255, 255, 255, 0.87);
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -22,11 +22,13 @@ a:hover {
 }
 
 body {
-  margin: 0;
+  position: relative;
+  margin: 0px;
   display: flex;
   min-width: 320px;
   min-height: 100vh;
   background-color: #242424;
+  justify-content: center;
 }
 
 h1 {
@@ -52,6 +54,35 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+.root {
+  display: flex;
+  padding: 2rem;
+  text-align: center;
+  max-width: 1280px;
+  align-items: center;
+  justify-content: center;
+  background-color: #242424;
+}
+
+input {
+  height: 35px;
+  font-size: large;
+  padding: 3px;
+  width: 150px;
+  text-align: center;
+  background-color: #3b3b3b;
+  color: white;
+}
+
+b,
+span {
+  color: white;
+}
+
+fieldset {
+  text-align: start;
 }
 
 @media (prefers-color-scheme: light) {

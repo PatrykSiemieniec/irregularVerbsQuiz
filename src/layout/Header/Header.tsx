@@ -1,6 +1,6 @@
 import { FC } from "react";
-import { headerProps } from "../types";
-
+import { headerProps } from "../../types";
+import "./Header.css";
 const Header: FC<headerProps> = ({ count }) => {
   const polishVerbsVariant = () => {
     if (count === 1) {
@@ -14,7 +14,7 @@ const Header: FC<headerProps> = ({ count }) => {
   return (
     <header>
       <span>
-        Wspaniale! Znasz już:
+        Znasz:
         <b>
           <em>{count}</em>
         </b>

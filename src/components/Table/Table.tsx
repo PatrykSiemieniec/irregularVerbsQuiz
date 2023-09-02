@@ -1,10 +1,8 @@
 import { FC, useState, forwardRef } from "react";
 import "./Table.css";
 import { tensesPropsTypes } from "../../types";
-import Infinitive from "../Infinitive";
-import PastSimple from "../PastSimple";
-import PastParticiple from "../PastParticiple";
-import Modal from "../../layout/Modal/Modal";
+import { Infinitive, PastParticiple, PastSimple } from "..";
+import { Modal } from "../../layout";
 
 const Table: FC<tensesPropsTypes> = forwardRef<
   HTMLDivElement,

@@ -15,7 +15,8 @@
   text-align: start;
 }
 .translate b {
-  color: rgb(198, 196, 196);
+  color: rgb(240, 238, 238);
+  font-size: large;
 }
 .hint {
   position: absolute;

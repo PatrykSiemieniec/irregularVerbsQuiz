@@ -1,0 +1,23 @@
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #181818;
+  width: 100%;
+  font-size: 25px;
+  z-index: 1;
+  color: white;
+}
+header span b {
+  margin-inline: 10px;
+}
+
+@media (max-width: 750px) {
+  header {
+    box-sizing: border-box;
+    padding: 2px;
+  }
+  span {
+    font-size: 20px;
+  }
+}

@@ -5,16 +5,15 @@ import {
   compare_ZA_Infinitive,
   compare_ZA_Translate,
   shuffle,
-} from "./utils/compare";
-import CountContext from "./store/count-context";
-import Verbs, { IrregularVerbs } from "./shared/verbs.model";
-import Header from "./layout/Header";
-import SortAndFilter from "./components/SortAndFilter";
-import { ExceptionContext } from "./store";
-import Table from "./components/Table/Table";
-import FinalResult from "./components/FinalResult/FinalResult";
+} from "../../utils/compare";
+import CountContext from "../../store/count-context";
+import Verbs, { IrregularVerbs } from "../../shared/verbs.model";
+import { Header } from "../../layout";
+import { SortAndFilter, Table, FinalResult } from "..";
+import { ExceptionContext } from "../../store";
 
-const Game = () => {
+import "./IrregularVerbsQuiz.css";
+const IrregularVerbsQuiz = () => {
   const { setCount, count } = useContext(CountContext);
   const { setRefresh, refresh } = useContext(ExceptionContext);
 
@@ -89,11 +88,7 @@ const Game = () => {
     }
   };
 
-  return (
-    <div className="mainContainer">
-      <div className="main">{content()}</div>
-    </div>
-  );
+  return <div className="main">{content()}</div>;
 };
 
-export default Game;
+export default IrregularVerbsQuiz;

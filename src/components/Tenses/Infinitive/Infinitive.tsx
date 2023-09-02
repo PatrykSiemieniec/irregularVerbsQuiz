@@ -1,6 +1,6 @@
 import React, { useState, FC, useContext, useEffect } from "react";
-import { CountContext, ExceptionContext } from "../store";
-import { tensesPropsTypes } from "../types";
+import { CountContext, ExceptionContext } from "../../../store";
+import { tensesPropsTypes } from "../../../types";
 
 const Infinitive: FC<tensesPropsTypes> = ({ item }) => {
   const [infinitive, setInfinitive] = useState("");

@@ -1,14 +1,13 @@
-import "./App.css";
-
 import { ExceptionContextProvider } from "./store/exception-context";
-import Game from "./Game";
 import { CountContextProvider } from "./store/count-context";
+import { ScrollToTop, IrregularVerbsQuiz } from "./components";
 
 function App() {
   return (
     <CountContextProvider>
       <ExceptionContextProvider>
-        <Game />
+        <IrregularVerbsQuiz />
+        <ScrollToTop />
       </ExceptionContextProvider>
     </CountContextProvider>
   );

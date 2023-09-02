@@ -1,0 +1,26 @@
+.btnContainer {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 750px;
+  right: 10px;
+  z-index: 10000;
+  transition: top 0.3s ease-in-out;
+}
+
+.scrollTopBtn {
+  color: white;
+  padding: 0.8em 1em;
+}
+
+@media (max-width: 750px) {
+  .btnContainer {
+    top: 600px;
+  }
+}
+
+@media (max-width: 1270px) {
+  .btnContainer {
+    top: 700px;
+  }
+}

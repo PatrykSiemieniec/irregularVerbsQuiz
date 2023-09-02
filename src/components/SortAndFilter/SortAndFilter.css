@@ -1,0 +1,47 @@
+.sortandfilter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.sortandfilter input,
+select {
+  width: 200px;
+}
+.sortandfilter select {
+  font-size: medium;
+  height: 35px;
+  background-color: #3b3b3b;
+  color: rgb(240, 238, 238);
+
+  option {
+    color: white;
+  }
+  optgroup {
+    color: rgb(198, 196, 196);
+  }
+
+  option,
+  optgroup {
+    background-color: #3b3b3b;
+  }
+}
+
+.inputSearch {
+  color: white;
+  border: 0.5px solid gray;
+}
+.button {
+  background-color: #1a1a1a;
+}
+
+@media (max-width: 750px) {
+  .sortandfilter {
+    flex-direction: column;
+  }
+  .sortandfilter input,
+  select {
+    width: 100%;
+  }
+}
