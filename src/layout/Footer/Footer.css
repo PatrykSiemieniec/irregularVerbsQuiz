@@ -1,0 +1,22 @@
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #181818;
+  width: 100%;
+  font-size: 18px;
+  z-index: 1;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.links {
+  display: flex;
+  gap: 20px;
+}
+
+a {
+  color: white;
+  display: flex;
+}

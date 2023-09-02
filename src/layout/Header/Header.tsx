@@ -14,7 +14,7 @@ const Header: FC<headerProps> = ({ count }) => {
   return (
     <header>
       <span>
-        Znasz:
+        Znasz
         <b>
           <em>{count}</em>
         </b>
