@@ -20,6 +20,7 @@ body {
   min-height: 100vh;
   background-color: #242424;
   justify-content: center;
+  align-items: flex-start;
 }
 
 h1 {
@@ -53,9 +54,9 @@ button:focus-visible {
   padding: 2rem;
   text-align: center;
   max-width: 1280px;
-
   justify-content: center;
   background-color: #242424;
+  width: 100%;
 }
 
 input {
@@ -75,4 +76,17 @@ span {
 
 fieldset {
   text-align: start;
+}
+
+body::-webkit-scrollbar {
+  width: 1em;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
 }

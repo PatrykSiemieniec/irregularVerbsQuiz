@@ -8,6 +8,7 @@
   padding: 0.5rem;
   border: 0.1px solid gray;
   position: relative;
+  min-width: 90%;
 }
 .translate {
   grid-area: translate;
