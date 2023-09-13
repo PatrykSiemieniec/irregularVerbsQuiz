@@ -1,9 +1,16 @@
 import { FC, useContext } from "react";
 import { SortAndFilterProps } from "../../types";
-import { ExceptionContext } from "../../store";
+import { ExceptionContext, FocusContext } from "../../store";
 import "./SortAndFilter.css";
 const SortAndFilter: FC<SortAndFilterProps> = ({ sort, filter }) => {
   const { setRefresh } = useContext(ExceptionContext);
+  const {
+    setSecondFocusPP,
+    setSecondFocusPS,
+    setInfinitiveIndex,
+    setPastParticipleIndex,
+    setPastSimpleIndex,
+  } = useContext(FocusContext);
 
   const handleChangeSort = (e: React.ChangeEvent<HTMLSelectElement>) => {
     sort(e.target.value);
@@ -54,6 +61,11 @@ const SortAndFilter: FC<SortAndFilterProps> = ({ sort, filter }) => {
         onClick={() => {
           localStorage.clear();
           setRefresh((prev) => !prev);
+          setSecondFocusPP(false);
+          setSecondFocusPS(false);
+          setInfinitiveIndex(0);
+          setPastSimpleIndex(0);
+          setPastParticipleIndex(0);
         }}
       >
         Resetuj

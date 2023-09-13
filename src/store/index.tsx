@@ -1,4 +1,4 @@
 import CountContext from "./count-context";
 import ExceptionContext from "./exception-context";
-
-export { CountContext, ExceptionContext };
+import FocusContext from "./focus-context";
+export { CountContext, ExceptionContext, FocusContext };

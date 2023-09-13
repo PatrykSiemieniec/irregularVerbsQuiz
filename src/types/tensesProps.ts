@@ -4,5 +4,7 @@ export default interface tensesPropsTypes {
   index: number;
   item: Verbs;
   closeModal?: () => void;
-  ref?: React.Ref<HTMLDivElement> | React.Ref<HTMLInputElement>;
+  infinitiveRef?: React.MutableRefObject<HTMLInputElement[]>;
+  pastSimpleRef?: React.MutableRefObject<HTMLInputElement[]>;
+  pastParticipleRef?: React.MutableRefObject<HTMLInputElement[]>;
 }

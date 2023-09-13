@@ -67,8 +67,8 @@ const Modal: FC<tensesPropsTypes> = ({ closeModal, item }) => {
               }
             >
               {pastSimpleHint.first
-                ? item.pastSimple[0]
-                : modifyString(item.pastSimple[0])}
+                ? item.pastSimple[0]?.form
+                : modifyString(item.pastSimple[0]?.form)}
             </b>
             <br />
             <b
@@ -79,8 +79,8 @@ const Modal: FC<tensesPropsTypes> = ({ closeModal, item }) => {
               }
             >
               {pastSimpleHint.second
-                ? item.pastSimple[1]
-                : modifyString(item.pastSimple[1])}
+                ? item.pastSimple[1]?.form
+                : modifyString(item.pastSimple[1]?.form)}
             </b>
           </span>
           <span>
@@ -94,8 +94,8 @@ const Modal: FC<tensesPropsTypes> = ({ closeModal, item }) => {
               }
             >
               {pastParticipleHint.first
-                ? item.pastParticiple[0]
-                : modifyString(item.pastParticiple[0])}
+                ? item.pastParticiple[0]?.form
+                : modifyString(item.pastParticiple[0]?.form)}
             </b>
             <br />
             <b
@@ -106,8 +106,8 @@ const Modal: FC<tensesPropsTypes> = ({ closeModal, item }) => {
               }
             >
               {pastParticipleHint.second
-                ? item.pastParticiple[1]
-                : modifyString(item.pastParticiple[1])}
+                ? item.pastParticiple[1]?.form
+                : modifyString(item.pastParticiple[1]?.form)}
             </b>
           </span>
         </section>

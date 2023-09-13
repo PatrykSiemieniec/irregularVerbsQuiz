@@ -1,4 +1,4 @@
-import { useContext, useState, useEffect, useRef, createRef } from "react";
+import { useContext, useState, useEffect, useRef } from "react";
 import {
   compare_AZ_Infinitive,
   compare_AZ_Translate,
@@ -10,7 +10,7 @@ import CountContext from "../../store/count-context";
 import Verbs, { IrregularVerbs } from "../../shared/verbs.model";
 import { Header } from "../../layout";
 import { SortAndFilter, Table, FinalResult } from "..";
-import { ExceptionContext } from "../../store";
+import { ExceptionContext, FocusContext } from "../../store";
 
 import "./IrregularVerbsQuiz.css";
 const IrregularVerbsQuiz = () => {
@@ -59,13 +59,32 @@ const IrregularVerbsQuiz = () => {
     }
   }, [refresh]);
 
-  const tableRefs = useRef([]);
+  const infinitiveRef = useRef<HTMLInputElement[]>([]);
+  const pastSimpleRef = useRef<HTMLInputElement[]>([]);
+  const pastParticipleRef = useRef<HTMLInputElement[]>([]);
 
-  if (tableRefs.current.length !== sortAndFilterVerbs.length) {
-    tableRefs.current = Array(sortAndFilterVerbs.length)
-      .fill(null)
-      .map((_, index) => tableRefs.current[index] || createRef());
-  }
+  const { pastSimpleIndex, pastParticipleIndex, infinitiveIndex } =
+    useContext(FocusContext);
+
+  useEffect(() => {
+    if (pastSimpleRef.current && pastSimpleRef.current[pastSimpleIndex]) {
+      pastSimpleRef.current[pastSimpleIndex].focus();
+    }
+    console.log(pastSimpleRef);
+  }, [pastSimpleIndex]);
+  useEffect(() => {
+    if (
+      pastParticipleRef.current &&
+      pastParticipleRef.current[pastParticipleIndex]
+    ) {
+      pastParticipleRef.current[pastParticipleIndex].focus();
+    }
+  }, [pastParticipleIndex]);
+  useEffect(() => {
+    if (infinitiveRef.current && infinitiveRef.current[infinitiveIndex]) {
+      infinitiveRef.current[infinitiveIndex].focus();
+    }
+  }, [infinitiveIndex]);
 
   const content = () => {
     if (count === 317) {
@@ -77,10 +96,12 @@ const IrregularVerbsQuiz = () => {
           <SortAndFilter filter={filterVerbs} sort={sortVerbs} />
           {sortAndFilterVerbs.map((item, index) => (
             <Table
-              ref={tableRefs.current[index]}
               key={index}
               item={item}
               index={index}
+              infinitiveRef={infinitiveRef}
+              pastSimpleRef={pastSimpleRef}
+              pastParticipleRef={pastParticipleRef}
             />
           ))}
         </>
