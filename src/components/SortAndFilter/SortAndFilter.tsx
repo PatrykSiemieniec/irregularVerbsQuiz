@@ -3,7 +3,8 @@ import { SortAndFilterProps } from "../../types";
 import { ExceptionContext, FocusContext } from "../../store";
 import "./SortAndFilter.css";
 const SortAndFilter: FC<SortAndFilterProps> = ({ sort, filter }) => {
-  const { setRefresh } = useContext(ExceptionContext);
+  const { setRefresh, setPastParticipleException, setPastSimpleException } =
+    useContext(ExceptionContext);
   const {
     setSecondFocusPP,
     setSecondFocusPS,
@@ -66,6 +67,8 @@ const SortAndFilter: FC<SortAndFilterProps> = ({ sort, filter }) => {
           setInfinitiveIndex(0);
           setPastSimpleIndex(0);
           setPastParticipleIndex(0);
+          setPastParticipleException("");
+          setPastSimpleException("");
         }}
       >
         Resetuj

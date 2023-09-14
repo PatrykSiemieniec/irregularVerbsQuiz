@@ -47,7 +47,7 @@ const PastParticiple = forwardRef(
           localStorage.setItem("exceptions", JSON.stringify(prevLocal));
         }
         if (item.pastParticiple.length > 1 && !secondFocusPP) {
-          setPastParticipleIndex((prev) => prev + 1);
+          setPastParticipleIndex(item.pastParticiple[1].id);
           setSecondFocusPP(true);
         } else {
           setInfinitiveIndex(item.id + 1);

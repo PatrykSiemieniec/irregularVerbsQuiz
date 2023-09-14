@@ -46,7 +46,7 @@ const PastSimple = forwardRef(
           localStorage.setItem("exceptions", JSON.stringify(prevLocal));
         }
         if (item.pastSimple.length > 1 && !secondFocusPS) {
-          setPastSimpleIndex((prev) => prev + 1);
+          setPastSimpleIndex(item.pastSimple[1].id);
           setSecondFocusPS(true);
         } else {
           setPastParticipleIndex(item.pastParticiple[0].id);
